@@ -38,6 +38,14 @@
                                             <constraint firstAttribute="width" constant="105" id="e4i-s8-eUf"/>
                                         </constraints>
                                         <state key="normal" title="PokéRetrieve!!"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pokeRetrieveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pdd-GO-FzB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -63,6 +71,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="infoTextView" destination="RvD-TQ-TUQ" id="64b-gP-W9z"/>
+                        <outlet property="pokeRetrieveButton" destination="tOr-FB-RYx" id="VUk-i7-d0c"/>
+                        <outlet property="pokemonNameTextField" destination="F3f-Dp-Zsq" id="cJy-ap-Hul"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

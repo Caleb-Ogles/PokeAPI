@@ -32,12 +32,17 @@ class ViewController: UIViewController {
         let requestURL = pokemonAPIBaseURL + pokemonNameURLComponent
         
         Alamofire.request(requestURL).responseJSON { (response) in
-            
-            
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                self.infoTextView.text = json.stringValue
+                
+            case .failure(let error):
+                self.infoTextView.text = "Invalid ID or name, please try again!!"
+                print(error.localizedDescription)
+            }
             
         }
-        
-        
         
     }
     
@@ -47,12 +52,6 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
-    
-    
-    
-
 
 }
 

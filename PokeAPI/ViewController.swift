@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pokeRetrieveButton: UIButton!
     @IBOutlet weak var infoTextView: UITextView!
     
-    let pokemonAPIBaseURL = "https://pokeapi.co/api/v2/"
+    let pokemonAPIBaseURL = "https://pokeapi.co/api/v2/pokemon/"
     
     @IBAction func pokeRetrieveTapped(_ sender: Any) {
         pokemonNameTextField.resignFirstResponder()
@@ -29,13 +29,13 @@ class ViewController: UIViewController {
         
         let pokemonNameURLComponent = pokemonName.replacingOccurrences(of: " ", with: "+")
         
-        let requestURL = pokemonAPIBaseURL + pokemonNameURLComponent
+        let requestURL = pokemonAPIBaseURL + pokemonNameURLComponent + "/"
         
         Alamofire.request(requestURL).responseJSON { (response) in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                self.infoTextView.text = json.stringValue
+                self.infoTextView.text = json["name"].stringValue
                 
             case .failure(let error):
                 self.infoTextView.text = "Invalid ID or name, please try again!!"

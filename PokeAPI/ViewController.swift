@@ -33,13 +33,11 @@ class ViewController: UIViewController {
         
         let requestURL = pokemonAPIBaseURL + pokemonNameURLComponent + "/"
         
-        let placeholderImage =
-        
         Alamofire.request(requestURL).responseJSON { (response) in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                self.infoTextView.text = json["name"].stringValue
+                self.infoTextView.text = json["name"].stringValue.capitalized
                 self.pokemonImageView.sd_setImage(with: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(json["id"].stringValue).png" ), placeholderImage: UIImage(named: "placeholder.png"))
                 
                 
@@ -49,6 +47,8 @@ class ViewController: UIViewController {
             }
             
         }
+        
+        
         
     }
     

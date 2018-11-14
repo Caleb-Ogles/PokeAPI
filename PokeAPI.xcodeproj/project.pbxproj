@@ -12,6 +12,7 @@
 		BF01A6AC2199E73F00A856FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF01A6AA2199E73F00A856FF /* Main.storyboard */; };
 		BF01A6AE2199E73F00A856FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF01A6AD2199E73F00A856FF /* Assets.xcassets */; };
 		BF01A6B12199E73F00A856FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF01A6AF2199E73F00A856FF /* LaunchScreen.storyboard */; };
+		BFB89FA8219C82390057A09E /* AllPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB89FA7219C82390057A09E /* AllPokemonViewController.swift */; };
 		FFEDEDE24CE89AC8F1C87147 /* Pods_PokeAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D64794020A31B3E5601F0A9 /* Pods_PokeAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		BF01A6AD2199E73F00A856FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF01A6B02199E73F00A856FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF01A6B22199E73F00A856FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFB89FA7219C82390057A09E /* AllPokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPokemonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				BF01A6A62199E73F00A856FF /* AppDelegate.swift */,
+				BFB89FA7219C82390057A09E /* AllPokemonViewController.swift */,
 				BF01A6A82199E73F00A856FF /* ViewController.swift */,
 				BF01A6AA2199E73F00A856FF /* Main.storyboard */,
 				BF01A6AD2199E73F00A856FF /* Assets.xcassets */,
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB89FA8219C82390057A09E /* AllPokemonViewController.swift in Sources */,
 				BF01A6A92199E73F00A856FF /* ViewController.swift in Sources */,
 				BF01A6A72199E73F00A856FF /* AppDelegate.swift in Sources */,
 			);
